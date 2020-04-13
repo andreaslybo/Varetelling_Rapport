@@ -1,0 +1,86 @@
+%%%%%%%%%%%%%%%%%%%% DESCRIPTION %%%%%%%%%%%%%%%%%
+\section{\textbf{Installasjon av løsning}}
+\subsection{\textbf{Brukerinformasjon}}
+1. Brukernavn: gruppe16smidig@gmail.com\\
+2. Passord   : Kolonial123\\
+$\rightarrow$ Eventuelt egen bruker hos Kolonial.no
+
+\subsection{\textbf{Google Play Store}}
+Løsningen er tilgjenglig på Google Play Store for Android-enheter.
+\url{https://play.google.com/store/apps/details?id=no.octopod.smidig.kolonial}
+
+\subsection{\textbf{Forkrav for bygging av prosjekt}}
+Det forutsettes at Cordova, Ionic og Node er installert for å kunne bygge løsningen selv.
+
+\subsubsection{\textbf{Installering av forkrav}}
+\paragraph{\textbf{Node}}
+\subparagraph{Windows}
+Node for Windows kan lastes ned fra \url{https://nodejs.org/en/download/}.
+
+\subparagraph{MacOS}
+Installer Node med cURL:
+\begin{minted}[breaklines]{bash}
+curl "https://nodejs.org/dist/latest/node-${VERSION:-$(wget -qO- https://nodejs.org/dist/latest/ | sed -nE 's|.>node-(.).pkg.*|\1|p')}.pkg" > "$HOME/Downloads/node-latest.pkg" && sudo installer -store -pkg "$HOME/Downloads/node-latest.pkg" -target "/"
+\end{minted}
+
+\subparagraph{Linux}
+\begin{minted}[breaklines]{bash}
+curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash - sudo apt-get install -y nodejs
+\end{minted}
+
+\paragraph{\textbf{Ionic og Cordova}}
+\paragraph{Windows, MacOS og Linux\newline}
+Kjør følgende kommando i terminalvinduet:
+\begin{minted}[breaklines]{bash}
+npm install -g ionic cordova
+\end{minted}
+
+\subsection{\textbf{Kjøre løsningen}}
+Kildekoden for løsningen kan lastes ned fra \url{https://github.com/Westerdals/PRO200-17-16/archive/master.zip}.
+
+\subsubsection{\textbf{Kjør på Android}}
+Android SDK og Java JDK er forkrav for å kunne bygge APK for Android.
+Android SDK kan lastes ned fra \url{https://developer.android.com/studio/}.
+Java JDK kan lastes ned fra \url{http://www.oracle.com/technetwork/java/javase/downloads}.
+
+Koble til telefonen og kjør følgende kommando i rotmappen til løsningen:
+\begin{minted}[breaklines]{bash}
+ionic cordova run android
+\end{minted}
+
+\textit{Løsningen kan også kjøres i Android Emulator ved å kjøre samme kommando uten å koble til telefon.}
+
+\subsubsection{\textbf{Emulering i nettleser}}
+\textit{Å kjøre løsningen i web er ikke anbefalt. Applikasjonen fungerer ikke som tiltenkt, grunnet CORS-restriksjoner i Kolonials API}.
+
+Kjør følgende kommando i rotmappen til løsningen:
+\begin{minted}[breaklines]{bash}
+ionic serve --lab
+\end{minted}
+\textbf{NB! CORS må skrus av for å kunne kjøre løsningen i nettleser!}
+
+\paragraph{\textbf{Deaktiver CORS i Google Chrome}}\mbox{}
+\subparagraph{{Windows}}\mbox{}\\
+1. Lukk alle Chrome-vinduer\\
+2. Kjør følgende kommando i mappen chrome er installert i:
+\begin{minted}[breaklines]{bash}
+chrome.exe --disable-web-security --user-data-dir
+\end{minted}
+
+\subparagraph{{MacOS}}\mbox{}\\
+1. Lukk alle Chrome-vinduer\\
+2. Kjør følgende kommando i terminalvindu:
+\begin{minted}[breaklines]{bash}
+open -a Google\ Chrome --args --disable-web-security --user-data-dir
+\end{minted}
+
+\subparagraph{{Linux}}\mbox{}\\
+1. Lukk alle Chrome-vinduer\\
+2. Kjør følgende kommando i terminalvindu:
+\begin{minted}[breaklines]{bash}
+google-chrome --disable-web-security --user-data-dir
+\end{minted}
+
+\paragraph{\textbf{Deaktiver CORS i Safari}}\mbox{}\\
+1. Aktiver Developer Tools in Safari\\
+2. Develop $\rightarrow$ Disable Cross-Origin Restrictions

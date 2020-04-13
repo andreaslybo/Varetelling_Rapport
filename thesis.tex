@@ -1,0 +1,75 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass{harvard-thesis}
+\usepackage[norsk]{babel}
+\usepackage{parskip}
+\usepackage[norsk]{inputenc}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{dirtytalk}
+
+\usepackage{pdfpages}
+%\usepackage[section]{placeins}
+%\usepackage[subsection]{placeins}
+\usepackage{float}
+\usepackage{babelbib}
+%\usepackage[authordate]{biblatex-chicago}
+%\DeclareFieldFormat[article]{title}{\mkbibquote{#1}} % make article titles in quotes
+%\DeclareFieldFormat[thesis]{title}{\mkbibemph{#1}} % make theses italics
+%\addbibresource{references}
+\usepackage{lscape}
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage{listings}
+\usepackage{color}
+
+\usepackage{minted}
+\usepackage{blindtext}
+ 
+\begin{document}
+
+% the front matter
+\input{frontmatter/coverpage}
+\setcounter{tocdepth}{2}
+\tableofcontents
+%\acknowledgments
+\listoffigures
+\include{chapters/dok-struktur}
+%\abstractpage
+%\authorlist
+
+
+\onehalfspacing
+
+% include each chapter...
+\include{chapters/innledning}
+\include{chapters/Prosess-og-metode}
+\include{chapters/Teknisk}
+\include{chapters/Design-og-utforming}
+\include{chapters/Bruker-marked}
+\include{chapters/Løsning}
+\include{chapters/Utfordringer}
+\include{chapters/vurdering-resultat}
+%\include{chapters/malgruppe}
+%\include{chapters/mal}
+%\include{chapters/produkt}
+%\include{chapters/kommunikasjonsstrategi}
+%\include{chapters/brukertest}
+%\include{chapters/leveransetest}
+%\include{chapters/vurdering-resultat}
+%\include{chapters/veien-videre}
+% the back matter
+\clearpage
+\bibliography{references}
+\nocite{*}
+\addcontentsline{toc}{chapter}{Bibliografi}
+\bibliographystyle{chicagoNew}
+\include{chapters/tabell}
+
+\singlespacing
+
+
+
+
+\end{document}
