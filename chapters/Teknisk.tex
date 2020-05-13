@@ -1,5 +1,5 @@
 
-\chapter{Tekniske valg}
+\chapter{\color{Millum}\textbf{Tekniske valg}}
 \newthought {Som en naturlig del av et IT-prosjekt} er de tekniske valgene grunnlaget for prosjektets fundament. I dette kapittelet drøfter vi valg av programmeringsspråk, rammeverk og arkitektur tilhørende denne prosessen.
 
 \section{\textbf{Programmeringsspråk og rammeverk}}
@@ -14,16 +14,24 @@ For å velge et programmeringsspråk og rammeverk som passer prosjektet er det e
 Denne avhengigheten gjør at vi er nødt til å velge et rammeverk som tar i bruk nativefunksjonalitet. I tillegg til å ha mulighet til å bruke nativefunksjonalitet ønsket vi å ha muligheten til å utvikle mot både iOS og Android. Å skulle utvikle to separate løsninger er ikke ideelt da det øker utviklingstiden og behov for vedlikehold dobles. Enkelte utviklingsverktøy lar deg skrive en kodebase og kompilere til forskjellige operativsystemer. Blant disse finner man:
 
 \begin{itemize}
-  \item Ionic
-  \item React Native, utvikles og oppretholdes av Facebook
-  \item Xamarin, Microsoft sitt alternativ
-  \item Flutter, Google sitt alternativ
+  \item \textbf{Ionic}
+  \item \textbf{React Native}, utvikles av Facebook
+  \item \textbf{Xamarin}, Utvikles av Microsoft
+  \item \textbf{Flutter}, Utvikles av Google
   \item m.m
 \end{itemize}
 
-Flere av gruppemedlemmene har erfaring med Angular og React, og muligheten til å velge disse rammeverkene har influert valget. React Native gjør i stor grad utvikleren til å være avhengig av plattformens egne layouter og design, mens Ionic gir utvikler muligheten til å skrive HTML og CSS. Vi har vært opptatte av å følge Millums egne designmanual som følger fargekoder, ikoner og lignende. Det å kunne lett lage egne design og uttrykk fulgte med at vi falt på Ionic med Angular. 
+Flere av gruppemedlemmene har erfaring med Angular og React, og muligheten til å velge disse rammeverkene har influert valget. React Native gjør i stor grad utvikleren til å være avhengig av plattformens egne layouter og design, mens Ionic gir utvikler muligheten til å skrive HTML og CSS. Vi har vært opptatte av å følge Millums egne designmanual som følger fargekoder, ikoner og lignende. Det å kunne lett lage egne design og uttrykk fulgte med at vi falt på Ionic med Angular.
 
-Siden vi har vært opptatt av å følge designmanualen til Millum og i stor grad lage løsningen som en utvidelse av webløsningen har det å lett kunne lage egne design og uttrykk falt valget på Ionic med Angular. 
+For å sette egne design og utrykk har vi istedenfor å bruke vanlig CSS valgt å gå for Sass: Syntatically Awesome Style Sheets. Måten vi har brukt Sass på mer spesifikt er ved fargebruk. Her kan vi ha én global sass-fil som holder på alle fargekodene som stammer fra Millums fargepalett, og ta i bruk disse ved å kun referere til variabelnavn. 
+
+I tillegg kan man med Sass nøste elementer på en måte vi ønsker å jobbe med enn hvordan man gjør dette i CSS.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=75mm]{figures/Tekniske-valg/scssExample.PNG}
+    \caption{Bruk av variabelnavn og nøsting av elementer i sass.}
+\end{figure}
  
  \subsection{\textbf{Mobilutvikling}}
  For mobilutvikling snakker man ofte om native- og hybrid-utvikling, som er måter å utvikle applikasjonene på. Det å utvikle native gir deg ofte bedre ytelse i store applikasjoner, men gjør i gjengjeld at du må skrive flere separate kodebaser dersom du skal utvikle mot ulike operativsystem. Hybridutvikling er en måte å utvikle mot flere ulike plattformer. Fordelen med å kunne utvikle mot flere plattformer samtidig er at man ofte kan skrive én felles kodebase, men man ofrer gjerne en del av ytelsen som native-utvikling tilbyr deg, samt andre native-funksjoner dersom rammeverket ikke tilbyr dette. 
@@ -32,22 +40,25 @@ Siden vi har vært opptatt av å følge designmanualen til Millum og i stor grad
 
 \subsection{\textbf{Angular}}
 %Hvorfor Angular
-Vi valgte Angular som vårt rammeverk fordi det er rammeverket utviklingsteamet til Millum Procurement bruker.  Vår mobilapplikasjon skal være utformet som en en utvidelse av Millum Procurement, og ikke en frittstående applikasjon. Videre vil det å bruke samme rammeverk være hensiktsmessig ettersom Millum selv skal overta prosjektet. Det vil absolutt forenkle prosessene ved videreutvikling og drift for utviklingsteamet.
+Som nevnt tidligere ønsket vi å lett kunne lage eget design og egne uttrykk, og valgte derfor Ionic med Angular. Vår mobilapplikasjon skal være utformet som en en utvidelse av Millum Procurement, og ikke en frittstående applikasjon. Videre vil det å bruke samme rammeverk være hensiktsmessig ettersom Millum selv skal overta prosjektet. Det vil absolutt forenkle prosessene ved videreutvikling og drift for utviklingsteamet.
 
 %Hva er Angular
-Angular er et javascript-rammeverk og utviklingsplattform for å utvikle effektive og komplekse Single Page Applications (SPA) i HTML, CSS og TypeScript. TypeScript er et skrevet supersett av JavaScript som kompilerer til vanlig JavaScript. Single Page Applications  betyr kort fortalt at man istedenfor å laste inn hele siden hver gang man navigerer, så laster man kun inn delene av siden som har forandret seg. Dette gjør at innlastingstiden er betydelig lavere enn i en tradisjonell webløsning. 
+Angular er et javascript-rammeverk og utviklingsplattform for å utvikle effektive og komplekse Single Page Applications (SPA) i HTML, CSS og TypeScript. TypeScript er et supersett av JavaScript som kompilerer til vanlig JavaScript. Single Page Applications betyr kort fortalt at man istedenfor å laste inn hele siden hver gang man navigerer, så laster man kun inn delene av siden som har forandret seg. Dette gjør at lastetiden er betydelig lavere enn i en tradisjonell webløsning. 
 
 De fundamentale byggesteinen i Angular er NgModuler, komponenter og tjenestetilbydere. NgModuler er et kjernekonsept i Angular som er en del av enhver applikasjon og hjelper til med å samle viktige detaljer for kompilatoren og applikasjonens driftstid. De er spesielt nyttige for å organisere kode i funksjoner, lazy loading for routing, og lage gjenbrukbare biblioteker. NgModuler kan inneholde komponenter,  tjenestetilbydere og andre kodefiler.
 
 Komponenter definerer hva som vises og inneholder logikk som definerer atferden. Ideelt sett er komponenten sitt ansvar kun selve brukeropplevelsen og ingenting mer. Komponentbasert programvareutvikling vektlegger separasjon av bekymringer med hensyn til den omfattende funksjonaliteten. Selve tankegangen er å skille ut deler av siden til egne komponenter som kan gjenbrukes. 
 
-Tjenestetilbydere, heretter kalt "Service" er en bred kategori som omfatter enhver verdi, funksjon eller funksjon som en app trenger. En service er typisk en klasse med et smalt, veldefinert formål. Den skal gjøre noe spesifikt og gjøre det bra. Vår bruk av services blir utdypet i kapittel \textbf{\ref{kommunikasjon}} 
+Tjenestetilbydere, heretter kalt ``Service`` er en bred kategori som omfatter enhver verdi, funksjon eller funksjon som en applikasjon trenger. En service er typisk en klasse med et smalt, veldefinert formål. Den skal gjøre noe spesifikt og gjøre det bra. Vår bruk av services blir utdypet i avsnittet \textbf{\ref{kommunikasjon}} 
 
 % Hvordan brukte vi Angular
-Vår bruk av Angular er ikke spesielt særegent fra andre Angular-prosjekter. Bruken av NgModuler er noe man må følge etter standard prosedyre, hvis ikke vil applikasjonen ikke kjøre. Derimot er det under bruk av komponenter og servicer man vil se forskjeller fra prosjekt til prosjekt. 
+Vår bruk av Angular er ikke spesielt særegent fra andre Angular-prosjekter. Bruken av NgModuler er noe man må følge etter standard prosedyre, hvis ikke vil ikke applikasjonen kjøre. Derimot er det under bruk av komponenter og servicer man vil se forskjeller fra prosjekt til prosjekt. 
 
 
-Tankegangen ved komponenter er å ta hvilken som helst nettside og splitt opp i deler av siden. Eksempler på hva som typisk kan være et eget komponent er navigasjonsmenyen, en liste med nyhetsartikler og sidemenyer. Det vil selvsagt variere hvor mange tenkte komponenter man trekker ut etter man har drøftet omfang og kompleksitet for hele applikasjonen.
+Tankegangen ved komponenter er å ta hvilken som helst nettside og dele opp i mindre deler. Eksempler på hva som typisk kan være et eget komponent er navigasjonsmenyen, en liste med nyhetsartikler og sidemenyer. Det vil selvsagt variere hvor mange tenkte komponenter man trekker ut etter man har drøftet omfang og kompleksitet for hele applikasjonen.
+
+
+
 
 \subsection{\textbf{Ionic}}
 
@@ -68,9 +79,15 @@ Et eksempel på å legge inn en knapp
 <ion-button>Ionic knapp!</ion-button>
 \end{lstlisting}
 
-%Hva er det i vår applikasjon som kommer fra Ionic rammeverket?
+\begin{figure}[H]
+    \centering
+    \includegraphics{figures/Tekniske-valg/ionicButtonExample.PNG}
+    \caption{Standard <ion-button>.}
+    \label{fig:my_label}
+\end{figure}
 
-Det er ikke slik at vi kun bruker ferdige Ionic-komponenter, og det er i aller stor grad modifikasjoner på designutrykk der vi velger å bruke deres komponenter. 
+%Hva er det i vår applikasjon som kommer fra Ionic rammeverket?
+Siden Ionic har tilgang til operativsystemspesifikke funksjoner har man blant annet mulighet til å implementere søkefelt, knapper, dialoger og lister. Fordelen med å bruke disse er at de ofte er svært optimaliserte og kan lazy loades. Ulempen er at det kan være store variasjoner i design og uttrykk på tvers av plattformer, og man manuelt må overskrive disse dersom man ønsker like uttrykk på flere plattformer.
 
 \begin{figure}[H] 
     \centering
@@ -79,33 +96,67 @@ Det er ikke slik at vi kun bruker ferdige Ionic-komponenter, og det er i aller s
     \label{modalComparison}
 \end{figure}
 
-I figuren ovenfor, \textbf{\ref{modalComparison}}, tar vi i bruk en modal, og så stylet det til å ikke ta hele skjermplassen. Dette for å vise brukeren at dette er en funksjonalitet knyttet til siden som vises i bakgrunnen, og at det ikke er en annen side de har navigert seg til.
+I figuren ovenfor, \textbf{\ref{modalComparison}}, tar vi i bruk en modal, og så stilsatt den til å ikke ta hele skjermplassen. Dette for å vise brukeren at dette er en funksjonalitet knyttet til siden som vises i bakgrunnen, og at det ikke er en annen side de har navigert seg til. Et eksempel der vi bruker nativefunksjonalitet.
 
-Ionic tilbyr også native API-løsninger. Native API-løsninger gjør det slik at man kan ta i bruk funksjonalitet som kamerabruk, mobil-tastatur eller fingeravtrykksleser. Det Ionic gjør for oss er i tilgjengeligjøre tilgang til for eksempel kameraet uten at vi må vite de spesifikke detaljene for hvordan iOS eller Android håndterer dette. 
+Ionic tilbyr også native API-løsninger. Disse gjør det slik at man kan ta i bruk funksjonalitet som kamerabruk, mobiltastatur eller fingeravtrykksleser. Ionic abstraherer og håndterer sikkerhetsutfordringer slik at vi kan få tilgang til for eksempel kameraet uten at vi må vite de spesifikke detaljene for hvordan iOS eller Android håndterer dette. 
 
+Når det kommer til å lagring av informasjon på mobileneheten har Ionic flere muligheter og vi har valgt å ta i bruk Ionic Storage \cite{ionic:storage} for dette. Ionic Storage er en enkel lagringsmodul med ytterligere støtte for SQLite. Her kan vi altså lagre JSON objekter og nøkkel/verdipar til forskjellige lagringsmotorer, samlet gjennom ett grensesnitt.
 
 \section{\textbf{Arkitektur}}
-Softwarearkitektur refererer til de fundamentale strukturene og disiplinene til å lage et system. Å gjøre gode arkitekturvalg tidlig i prosessen gjør at vi får mulighet til å gjenbruke mest mulig kode og dele sentrale grensesnitt og funksjoner. I dette avsnittet skal vi drøfte arkitekturvalgene våre.
+Softwarearkitektur refererer til de fundamentale strukturene og disiplinene til å lage et system. Å gjøre gode arkitekturvalg tidlig i prosessen gjør at vi får mulighet til å gjenbruke mest mulig kode og dele sentrale grensesnitt og funksjoner. I dette kapittelet skal vi drøfte arkitekturvalgene våre.
 
 \subsection{\textbf{Kommunikasjon}} \label{kommunikasjon}
-I enhver applikasjon er det viktig å definere hvordan kommunikasjonen skal foregå for å gjøre datafangst. I dette avsnittet går vi litt mer i dybden på hvordan kommunikasjonen foregår mellom mobilapplikasjonen og Millum sine API-er.
+I enhver applikasjon er det viktig å definere hvordan kommunikasjonen skal foregå for å gjøre datafangst. Her går vi litt mer i dybden på hvordan kommunikasjonen foregår mellom mobilapplikasjonen og Millum sine API-er.
 
 I løsningen vår er hver datastruktur eller tjeneste (varetelling, produkt osv.) delt inn i egne services. En service er ansvarlig for å tilgjengeliggjøre data når brukeren ber om det. Det kan være i form av at man ønsker å hente data relatert til en varetelling eller et produkt, eller at man ønsker å sende inn sin varetelling.
 
-Servicen som er ansvarlig for å håndtere dette gjør et kall videre til en datatjeneste, heretter kalt “data service”. Data servicen er ansvarlig for selve kommunikasjonen mot API-ene. Kommunikasjonen foregår via Millum sin “Gateway” som igjen er ansvarlig for å lede kommunikasjonen til deres interne tjenester. Resultatet av handlingen data servicen ba om blir levert i en HTTP statuskode. Normalt sett hvis handlingen var vellykket får vi tilbake en statuskode “200”. HTTP-protokollen er en godt utprøvd protokoll for kommunikasjon og blir brukt i de aller fleste webapplikasjoner. All kommunikasjon vi gjør over HTTP-protokollen blir gjort via JSON-format, som er en måte å strukturere dataobjekter på.
+Servicen som er ansvarlig for å håndtere dette gjør et kall videre til en datatjeneste, heretter kalt “data service”. Data servicen er ansvarlig for selve kommunikasjonen mot API-ene. Kommunikasjonen foregår via Millum sin “Gateway” som igjen er ansvarlig for å lede kommunikasjonen til deres interne tjenester. Resultatet av handlingen data servicen ba om blir levert i en HTTP statuskode. Normalt sett hvis handlingen var vellykket får vi tilbake en statuskode ``200``. HTTP-protokollen er en godt utprøvd protokoll for kommunikasjon og blir brukt i de aller fleste webapplikasjoner. All kommunikasjon vi gjør over HTTP-protokollen blir gjort via JSON-format, som er en måte å strukturere dataobjekter på.
 
-Avtalen med Millum er at de leverer API-ene, og vi konsumerer disse igjen i applikasjonen. Dette er et bevisst valg med tanke på sikkerhet, men også med tanke på kompleksiteten og scopet til prosjektet vårt. 
+Avtalen med oppdragsgiver er at de leverer API-ene, og vi konsumerer disse igjen i applikasjonen. Dette er et bevisst valg med tanke på sikkerhet, men også med tanke på kompleksiteten og scopet til prosjektet vårt. 
 
 \begin{figure}[H] 
     \centering
     \includegraphics[width=\textwidth]{figures/Tekniske-valg/Arkitektur/kommunikasjon.JPG}
-    \caption{Kommunikasjon mellom frontend og backend}
+    \caption{Kommunikasjon mellom frontend og backend. Egen illustrasjon.}
+\end{figure}
+
+\subsection{\textbf{Utvikling}}
+\subsubsection{\textbf{Versjonskontroll}}
+For å ha kontroll på programvaren, endringshistorikk og ha mulighet til å utvikle parallelt benyttet vi oss av Git  og TFS (Team Foundation Server, senere Azure DevOps). Git er et distribuert versjonskontrollsystem og TFS fungerer som et komplett prosjektstyringsverktøy og vertstjeneste for kildekoden.
+
+En av fordelene man har ved å bruke disse systemene er at man har mulighet til å lage avgreninger av kildekoden, heretter kalt \textit{branches}, slik at utviklerne kan jobbe isolert. Når utviklingsmålet er nådd i en branch kan utvikleren åpne en Pull Request, som er en forespørsel om å flette inn koden sin i en annen branch. Et typisk eksempel på dette er at man har gjort ferdig en user story og ønsker å flette inn denne i utviklingsbranchen slik at alle får tilgang på de siste endringene.
+
+\begin{figure}[H] 
+    \centering
+    \includegraphics[width=\textwidth]{figures/Tekniske-valg/Utvikling/Git.jpg}
+    \caption{Git branching og pull requests. Egen illustrasjon}
+    \label{Git}
+\end{figure}
+
+Vi har laget egne regler for hvordan slik fletting skal gjennomføres. Det kan ikke være konflikter i koden på tidspunktet man ønsker å flette inn koden. Hvis det finnes konflikter må disse løses før flere handlinger kan gjøres. Når det ikke finnes konflikter i koden må en annen utvikler gå gjennom koden i det som typisk kalles et Code Review. Hensikten med et Code Review er å kvalitetssikre koden og utelukke åpenbare feil og mangler. Se \textbf{\ref{Git}} for hvordan våre regler fungerer. I mer komplekse applikasjoner har man ulike regler i ulike brancher slik at kun seniorutviklere, teamledere eller lignende har mulighet til å godkjenne Pull Requests til for eksempel Master Branch, som i de fleste tilfeller gjenspeiler produksjonskoden.
+
+Som man ser i \textbf{\ref{Illustrasjon_versjonskontroll}} er det et klart strukturert hierarki. Master, Development og User Story branches definerer separate ansvarsområder i versjonskontrollsystemet. Måten vi har strukturert det på er slik :
+\begin{itemize}
+  \item \textbf{Master branch} - Gjenspeiler produksjonsmiljøet.
+  \item \textbf{Development branch} - En stabil utgave av utviklingsmiljøet
+  \item \textbf{User Story branch} - Egen branch for hver brukerhistorie.
+  \begin{itemize}
+      \item Klones lokal kopi av User Story branch på utviklerens maskin
+      \item Disse må gjennom code review for å bli godkjent og merget inn i Development
+  \end{itemize}
+\end{itemize}
+
+\begin{figure}[H] 
+    \centering
+    \includegraphics[width=\textwidth]{figures/Tekniske-valg/Utvikling/TFS.jpg}
+    \caption{Illustrasjon av hvordan vi brukte et distribuert versjonskontrollsystem. Egen illustrasjon.}
+    \label{Illustrasjon_versjonskontroll}
 \end{figure}
 
 \subsection{\textbf{Designmønster}}
 
 I årevis har designmønsteret blitt brukt, men det har ikke alltid vært slik at man har vært bevisst på det. Det var arkitekten Christopher Alexander som i 1970-årene konkretiserte konseptet designmønstre innenfor arkitektur-konsepter \cite{christopheralexander}. Videre prøvde man å bruke disse konseptene innenfor programvare-utvikling. Det var derimot ikke før en av de mest kjente bøkene om designmønster,   
-Design Patterns: Elements of Reusable Object-Oriented Software, kom på banen i 1994 at utviklere virkelig sperret øynene opp. 
+Design Patterns: Elements of Reusable Object-Oriented Software, kom på banen i 1994 at utviklere virkelig sperret opp øynene. 
 
 
 \begin{table}[htbp]
@@ -132,13 +183,13 @@ Model View Controller, MVC,  er et design pattern som deler inn programmet i tre
   \item[$\bullet$ Controller:] Tar i mot hendelser fra viewet og interagerer med modellen.
 \end{description}
 
-To store fordeler med MVC er
+To store fordeler med MVC er:
 
 1. Du kan ha flere views knyttet til én modell for å gi forskjellige presentasjoner av samme data.
 
 2. Endre viewet til å respondere på brukerinnspill uten å endre den visuelle representasjonen
 
- I vår løsning har vi hatt ansvar for å lage modellen og viewet, mens controlleren kommuniserer med oppdragsgiver egne tjenester. Et eksempel på hvordan dette henger sammen er at brukeren logger inn og skal hente sine varetellinger. Dette gjøres via et API-request til varetellingscontrolleren, som leverer tilbake informasjon som modellen strukturerer og videre presenteres i viewet. 
+ I vår løsning har vi hatt ansvar for å lage modellen og viewet, mens controlleren kommuniserer med oppdragsgivers egne tjenester. Et eksempel på hvordan dette henger sammen er at brukeren logger inn og skal hente sine varetellinger. Dette gjøres via et API-request til varetellingscontrolleren, som leverer tilbake informasjon som modellen strukturerer og videre presenterer i viewet. 
 
 \subsection{\textbf{Rule of One og Single Responsibility}}
 Single responsibility-prinsippet ble først introdusert av Robert C.Martin i hans artikkel med samme navn som en del av Principles of Object Oriented Design, gjort populært av hans bok Agile Software Development, Principles, Patterns, and Practices. Martin definerer responsibility i sin bok Agile Pratices, Patterns and Pratices in C\# som “In the context of the SRP, we define a responsibility to be a reason for change.” (Side 158). Definisjonen er noe tvetydig i formuleringen “a reason for change”. Martin fordyper denne definisjonen i et blogginnlegg kalt The Single Responsibility Principle.  
@@ -153,13 +204,41 @@ Dette prinsippet skal hjelpe deg som utvikler å finne fram til kode raskt. Vi h
 
 \textit{Hvor raskt kan du åpne og jobbe i alle filene du trenger for å lage en funksjon? }
 
-\textbf{Locate} gjør lokalsering av kode intuitivt og raskt. Det vil si å holde relaterte filer nær hverandre. Hvorfor gjør man dette? For å jobbe effektivkt må du kunne lokalisere filer raskt, spesielt npr du ikke kjenner, eller husker, filnavnene. Å holde relaterte filer nør hverandre på et intuitivt sted sparer tid. En beskrivende mappestruktur gjør all verdens forskjell for deg og menneskene som kommer etter deg.
+\textbf{Locate} gjør lokalisering av kode intuitivt og raskt. Det vil si å holde relaterte filer nær hverandre. For å jobbe effektivt ønsker man å kunne lokalisere filer raskt, spesielt når man ikke kjenner eller husker filnavnene. Å holde relaterte filer nær hverandre på et intuitivt sted sparer tid. En beskrivende mappestruktur gjør all verdens forskjell for deg og menneskene som kommer etter deg.
 
 \textbf{Identify} betyr det å ha et beskrivende navn for filene slik at du umiddelbart vet hva filen inneholder og representerer. Her er det viktigere å være beskrivende med filnavnet og holde innholdet i filen kun relatert til navngivningen. Det vil si at man ønsker i aller sterkeste grad følger single responsibilty-prinsippet.
 
-\textbf{Flat} omhandler selve mappestrukturen for prosjektet. Det å ha en flat mappestruktur betyr at man ønsker at en mappe skal maksimalt inneholde syv filer, og heller velge å lage undermapper om man overstiger antall filer. 
+\begin{itemize}
+    \item \textbf{Et eksempel på dårlig navngiving av en klasse:} public class X;
+    \item \textbf{Et eksempel på god navngiving av en klasse:} public class StockTakingItem;
+\end{itemize}
 
-På den annen side mener psykologer at mennesker begynner å slite når antallet nærliggende interessante ting overstiger ni \cite{miller1956magical}. 
+
+\textbf{Flat} omhandler selve mappestrukturen for prosjektet. Det å ha en flat mappestruktur betyr at man ønsker at en mappe skal maksimalt inneholde syv filer, og heller velge å lage undermapper om man overstiger antall filer. 
+Eksempelvis har vi denne mappestrukturen i løsningen vår:
+
+\begin{itemize}
+    \item \textbf{Modul}
+    \begin{itemize}
+        \item \textbf{Smartkomponent 1} - Håndterer logikk
+        \begin{itemize}
+            \item \textbf{Dum komponent 1} - Håndterer f.eks et klikk og gir informasjon videre til smartkomponenten.
+            \item \textbf{Dum komponent 2... osv}
+        \end{itemize}
+        \item \textbf{Smartkomponent 2... osv}
+    \end{itemize}
+    \item \textbf{Modul 2... osv}
+\end{itemize}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=75mm]{figures/Tekniske-valg/Utvikling/folderStructure.PNG}
+    \caption{Utsnitt av mappestruktur i prosjektet.}
+    \label{mappestruktur}
+\end{figure}
+
+
+På en annen side mener psykologer at mennesker begynner å slite når antallet nærliggende interessante ting overstiger ni \cite{miller1956magical}. 
 Så når en mappe har ti eller flere filer, kan det være på tide å lage undermapper. Baser avgjørelsen din på ditt komfortnivå. Bruk en flatere struktur til det er en åpenbar verdi å lage en ny mappe
 
-\textbf{Try to be Dry}, altså ikke repeter deg selv. For eksempel gir det ikke noe mening å lage en fil hetende "stock-taking-list-view.component.html". Dette er en HTML-fil og HTML-filer beskriver jo kun det som vises. Det vil dermed bli repetisjon at filnavnet skal inneholdet ordet "view". Om det derimot er tilfeller hvor noe ikke er åpenbart eller avvikende, så for all del stav det ut.
+\textbf{Try to be Dry}, altså ikke repeter deg selv. For eksempel gir det ikke noe mening å lage en fil hetende "stock-taking-list-\textbf{view}.component.html". Dette er en HTML-fil og HTML-filer beskriver jo kun det som vises. Det vil dermed bli repetisjon at filnavnet skal inneholdet ordet ``\textbf{view}``.

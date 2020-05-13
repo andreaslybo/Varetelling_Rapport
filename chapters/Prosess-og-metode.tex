@@ -1,35 +1,172 @@
-\chapter{\textbf{Prosess og metode}}
-\newthought I dette kapittelet skal vi gjøre rede for og drøfte vår prosjektplanlegging og arbeidsprosess
+\chapter{\color{Millum}\textbf{Prosess og metode}}
+\newthought I dette kapittelet går vi nærmere inn på prosesser og metoder vi har valgt, samt gjør vi rede for og drøfter vår prosjektplanlegging og arbeidsprosess.
 
-\subsection{\textbf{Historie}}
+\section{\textbf{Forskningsmetodikk}}
 
-Software-utvikling er fortsatt en relativt ny bransje, mens prosjektstyring har  og det å styre et IT-prosjekt har vært. Det har vært stor diskusjon og utprøvning av en rekke prosjekt styringsformer. I dette avsnittet legger vi frem tre populære prosjektstyrings-metodikker samt diskuterer deres bruk.
+Samtidig som vi gjennomførte bachelorprosjektet hadde vi emnet ''Undersøkelsesmetoder''. I dette var det flere læringsmål som omfatter hele prosessen ved å gjennomføre en undersøkelse for et IT-prosjekt og begrunne valg av metode ut fra en faglig gitt problemstilling. Vår eksamensinnlevering \textbf{(ref undersøk.met eksamen)} ble gjennomført med hensikt å kunne bruke det vi lærte i vårt bachelorprosjekt. Resultatet av oppgaven er en rapport med problemstillingen:
+
+\textit{''Hvordan redusere kostnad og tidsbruk i forbindelse med varetellingsrutiner?''}
 
 
-\subsection{\textbf{Waterfall-metodikken}}
+Vår valgte metode for datainnsamling har vært en spørreundersøkelse \cite{oates2006researching} (Oates, s. 93). En stor fordel med spørreundersøkelser er at vi når ut til målgruppen raskt. Vi har derimot ingen forutsetningen til å vite spesifikt om hvilke kunder som gjennomførte spørreundersøkelsen. Terskelen for et individ til å gjennomføre en spørreundersøkelse er også langt lavere enn det å eksempelvis gjøre et én-til-én intervju. I tillegg hadde vi også muligheten til å innhente både kvalitative og kvantitative data.
 
-Waterfall er det første forsøket på en SDLC(Software development lifecycle) model. En SDLC er en prosess brukt i software utviklings industrien til å designe, utvikle og teste høy kvalitet software. En waterfall modell er veldig enkel å følge, nettopp fordi den er trinnbasert og visuelt ligner den på et fossefall. 
+\subsubsection{\textbf{Kvalitative og kvantitative data}}
+
+Vi skiller mellom kvantitative og kvalitative data. “Kvantitative data” betyr data, eller bevis, basert på tall (Oates, s. 245). Kvalitative data inkluderer all ikke-numerisk data. Dette vil være for eksempel ord, bilder og lyd. (Oates, side 267). Ofte vil man samle inn kvantitative data når man gjennomfører eksperimenter og spørreundersøkelser. Kvalitative data kommer som oftest fra intervjuer, observasjoner, dokumenter og video.
+For de kvantitative dataene er det statistiske metoder som danner fundamentet for analyse. Formålet med statistiske metoder er å skaffe kunnskap om en større mengde enheter (individer eller objekter).
+
+For vår datainnsamling støter vi på både kvalitative og kvantitative data.
 
 \begin{figure}[H] 
     \centering
-    \includegraphics[width=\textwidth]{figures/Prosess-og-metode/waterfall.jpg}
-    \caption{Waterfall}
+    \includegraphics[width=\textwidth]{figures/Prosess-og-metode/spørreund.PNG}
+    \caption{Oversikt over hele spørreundersøkelsen}
 \end{figure}
 
+Før vi sendte spørreundersøkelsen fikk vi tekstskribenten hos oppdragsgiver til å gjennomføre og gi tilbakemeldinger på undersøkelsen for å kvalitetssikre at vi oppnådde de målene vi hadde satt for undersøkelsen.
+
+Vi planla videre å gjennomføre brukertester med flere av kundene, men fikk dessverre ikke mulighet til dette grunnet pandemien. Vi kommer tilbake til utfordringene rundt dette i \textbf{\ref{Andre_utfordringer}}.
+
+Hva vi lærte av forskningen og hvordan vi har knyttet det opp mot prosjektet vårt kommer vi tilbake til i \textbf{\ref{Kartlegging_behov}}.
+
+\section{\textbf{Prosjektmetodikk}}
+I dette kapittelet skal vi gjøre rede for og drøfte vår prosjektplanlegging og arbeidsprosess.
+
+\section{\textbf{Moderne IT prosjekter}}
+Det er en rekke ulike måter å sette opp et IT prosjekt på. Vi deler opp typer prosjekt i to hovedgrupper. Agile og Plan driven. Plan driven er prosjekter med strenge seremonielle krav til struktur og dokumentasjon som for eksempel Waterfall. Agile derimot er prosjekter som setter inkrementelle og iterative prosesser fremfor seremonielle strukturer. I dag følger de fleste større IT selskaper en Agile filosofi med ulike implementasjons varianter. SCRUM, Agile-Prince2, SCRUM-Devops, Agile-Lean er alle ulike implementasjoner av en Agile filosofi med ulike rammeverk brukt for implementasjon. Plan driven og Agile prosjekter eksisterer på to ulike akser hvor prosjekter er mindre eller mer Agile/Plan Driven. De fleste prosjekter vil ligge et sted mellom Plan Driven og Agile. Dvs at de inneholder momenter fra begge filosofier. 
 
 
-\paragraph{\textbf{Fordeler og ulemper med Waterfall}}
+\subsection{\textbf{Plan Driven}}
+Plan driven management er en eldre og mye brukt prosjektledelsestil. 
 
-\textbf{Klar struktur}
+ ``\textit{A style of development that attempts to plan for and anticipate up front all of the features a user might want in the end product and to determine how best to build those features. The work plan is based on execution of a sequential set of work-specific phase}s`` (2020. Plan-Driven Process. Innolution LLC).  
 
-Waterfall-metodikken skiller seg i stor grad fra de andre prosjektstyrings-metodikker ved at her "må" hvert trinn være gjennomført før arbeid på neste trinn starter. Denne lineære sekvensielle flyten står i sterk strid med nyere utviklingsmodeller, som for eksempel Agile/SCRUM. Dette gjørt at om det oppstår problemer så må disse håndteres med en gang for å ikke stoppe opp arbeidet. 
+Fordelen med en plandrevet tilnærming er at prosjektet ofte blir lettere å styre. Endringer, hindringer og mål dokumenteres godt for å forebygge eventuell risiko. Problemet med denne tilnærmingen er derimot at om det oppstår uforutsette hendelser som ikke er en del av risikoplanen kan det være vanskelig å tilrettelegge prosjektet. Prosjekter har derfor en større risiko for avbrudd dersom forandring må foretas. Dette er en av hovedgrunnen til at mange IT-selskaper har valgt å gå bort ifra en streng plan driven tilnærmingen. IT-prosjekter har en tendens til å inneha en stor grad av forandring ettersom brukerens ønsker og utviklingskriteriene er i konstant forandring. Dette betyr dog ikke at moderne IT-prosjekter ikke innebærer planlegging. Alle prosjekter trenger en overordnet struktur for å kunne fungere. 
 
-\textbf{Krystallklart sluttresultat}
+I et plandrevet prosjekt legges det opp til en stor sluttlansering av produktet. En klassisk form for prosjektstyringsstil heter Waterfall. Dette er prosjekter som følger en overordnet sekvensiell struktur:
+\begin{itemize}
+    \item \textbf{Requirements}. Krav til spesifikasjon.
+    \item \textbf{Design}. Utforming av produktet.
+    \item \textbf{Implementation}. Arkitektur og implementasjon.
+    \item \textbf{Verification}. Bekreftelse på at kravene er nådd.
+    \item \textbf{Maintenance}. Videre vedlikehold av produktet.
+\end{itemize}
+Hvert enkelt steg må fullføres før prosjektet kan fortsette til neste steg.    
 
-Tidlig i prosessen defineres sluttresultatet. Dette fungerer godt for prosjekter hvor
+\subsection{\textbf{Agile}}
+I 2001 møttes 17 utviklere på et resort i Utah, USA for å diskutere en rekke utviklingsmetoder som nylig hadde dukket opp. Resultatet av møtet var et manifest som kalles \textit{The Agile Manifesto}. I dette manifestet legges det frem en rekke prinsipper som danner grunnlaget for smidig utvikling.
+
+\textit{We are uncovering better ways of developing software by doing it and helping others do it. Through this work we have come to value:}
+\begin{itemize}
+    \item \textbf{Individuals and interactions} over processes and tools
+    \item \textbf{Working software} over comprehensive documentation
+    \item \textbf{Customer collaboration} over contract negotiation
+    \item \textbf{Responding to change} over following a plan
+\end{itemize}
+
+\subsubsection{\textbf{The Agile Manifesto}}
+Dette manifestet sammen med en rekke bøker og Agile alliances \textit{Agile glossary}
+dannet grunnlaget for smidig prosjektutvikling. 
+
+Agile er en utviklingsmodell som inneholder ulike tilnærminger til programvareutvikling hvor løsninger og krav utarbeides gjennom samhandling, selvorganisering og kryssfunksjonelle lag. Agiles metodikk er alltid rettet direkte mot sluttbrukerens ønsker. Agile omhandler adaptiv planlegging, evolusjonær utvikling, tidlig leveranse av produkt og kontinuerlig forbedring.
+ 
+Istedenfor å legge alt i en stor lansering jobber et smidig team i mindre inkrementelle lanseringer. Forventninger, planer og resultater er evaluert kontinuerlig for å gi teamet en naturlig måte å justere seg til forandring. Selv om det hovedsakelig er prosjektleder og produkteier som prioriterer det arbeidet som skal leveres er det opp til gruppen selv hvordan oppgavene burde løses.
+ 
+Agile er ikke definert av et sett seremonier eller spesifikke utviklingsmetoder, men er heller en tankegang eller tilnærming til planlegging og prosjektløsning hvor korte sykluser for tilbakemeldinger og kontinuerlig forbedring står i sentrum. Det originale Agile manifestet beskrev ikke nyere smidig praksis som x antall ukers sykluser eller et ideelt team størrelse, men la heller frem prinsipper.
+ 
+
+\section{\textbf{Scrum}}
+Scrum er et rammeverk som hjelper team å jobbe sammen. Scrum legger i likhet med Agile vekt på læring gjennom erfaring. Det vil si iterasjon og autonomi for hvert enkelt teammedlem og oppfordrer til refleksjon for kontinuerlig forbedring. 
+
+Selv om Scrum hovedsakelig blir brukt av utviklingsteam kan prinsippene og lærdommen benyttes i all slags lagsamarbeid. Dette er en av grunnen til at Scrum har blitt et populært rammeverk. Scrum blir ofte beskrevet som et smidig prosjektstyringsrammeverk, og beskriver et sett av møter, verktøy og roller som henger sammen for å hjelpe team å strukturere og gjennomføre arbeid.
+
+Agile og Scrum blir ofte sett på i sammenheng fordi Scrum i likhet med Agile sentreres rundt kontinuerlig forbedring. Forskjellen ligger i at Scrum er et rammeverk for å få arbeid gjort, mens Agile er et mer overodnet \textit{tankesett}. Det er ofte vanskelige å få Agiles tankegang ut i praksis fordi det trengs dedikasjon fra hele teamet for å forandre deres tankegang. Man kan derimot bruke et rammeverk som Scrum for hjelpe til å danne et grunnlag for smidig tenkning og for å øve på å bygge smidige prinsipper inn i kommunikasjon og arbeid.
+
+\subsection{\textbf{Faser og prosess}}
+Rammeverket Scrum tar utgangspunkt i at teamet ikke kan vite alt i starten av prosjektet og at prosjektet naturlig vil utvikle seg. Scrum er strukturert til å hjelpe team til å naturlig tilpasse seg forandring. Derfor innehar Scrum korte, definerte sykluser for å gi teamet mulighet til å kontinuerlig lære og forbedre seg.
+
+\subsubsection{\textbf{Sprint}}
+En sprint er Scrums iterative fikserte tidsramme hvor et “ferdig” produkt av høyest mulig verdi produseres. Teamet spesifiserer en tidsramme på som oftest 2-4 uker hvor en rekke mål blir definert som skal jobbes på og nøye gjennomgås i løpet av sprinten. Hvis en gjennomgang viser et avvik i produktet justeres produktet så fort som mulig for å forhindre videre avvik. Alt arbeid som er gjort og skal gjøres loggføres i en produkt backlog som videre brukes til å estimere ferdigstilling av produktet.
+
+\subsubsection{\textbf{Produkt Backlog}}
+En produkt backlog er en liste av gjøremål som trengs i løpet av prosjektets levetid. Elementene i listen kan være tekniske løsninger, krav eller mer brukerorienterte krav i form av brukerhistorier, heretter kalt "User Stories". User stories er korte konsise beskrivelser fortalt fra brukerens perspektiv. Et eksempel på en user story i vår løsning er: “Som bruker av applikasjonen ønsker jeg å kunne logge inn i applikasjonen slik at jeg får tilgang til mine varetellinger”. Eieren av en produkt backlogen er produkteieren. Scrum master, Scrum team og interessenter bidrar til å ferdigstille produkt backlogen. 
+
+Forskjellen på en Scrum backlog og en enkel gjøremålsliste ligger i at et element i Scrum backlog alltid rettes mot, arrangeres og prioriteres mot sluttbruker, i tillegg til at alle elementer i en Scrum backlog estimeres. 
 
 
-\subsection{Agile}
+\subsubsection{\textbf{Sprint Backlog}}
+En Sprint backlog er en backlog med et undersett av elementer tatt fra prosjektbacklogen som skal gjennomføres i løpet av en Sprint. Sprintbacklogen ligner produkt backlogen i oppbygning.
+
+\subsubsection{\textbf{Produkteier}}
+Produkteier bestemmer og definerer produktet som skal utvikles til enhver tid. I samarbeid med utviklingsteamet defineres oppgaven og dens akseptansekriterier. I vårt prosjekt har produkteier vært en komite av scrum master, produkteier og systemarkitekt for handelsplattformen vi utvikler mot, og de har vært ansvarlig for å definere brukerbehov i form av user stories.
+
+En produkteier kan kun være et individ, selv om dette individet kan være representert gjennom en komite. Jobben deres innebærer:
+\begin{itemize}
+    \item Opprettholde produktbacklogen
+    \item Prioritere i produktbacklogen
+    \item Sørge for at elementer i produktbacklogen er forståelig for utviklingsteamet
+\end{itemize}
+
+I vårt tilfelle har produkteier vært ppdragsgivers eksisterende produkteier.
+
+\subsubsection{\textbf{Scrum Master}}
+Scrum master kan på mange måter sammenlignes med en prosjektleder og coach. Ansvaret denne personer har er å sørge for at teamet forstår oppgavene i backlogen, sørge for fremdrift i prosjektet og være en støttespiller for utviklingsteamet samt holde unødvendig støy borte fra teamet. Dette kan for eksempel være kunder som maser om budsjett som kan forstyrre teamet i sine daglige  gjøremål. Denne personen skal også være ansvarlig for å fasilitere sprintrelaterte møter som daglig stand up, sprint review, sprint retrospective osv. Selv om man gjerne sammenligner Scrum Master med en prosjektleder har ikke denne personen tradisjonell beslutningsmakt og skal heller ikke hindre teamet i å komme frem til løsninger sammen.
+
+\subsubsection{\textbf{Utviklingsteamet}}
+Utviklingsteamet er ansvarlig for å implementere elementer i produkt backlogen.
+
+\subsubsection{\textbf{Daglig stand up}}
+Daglig stand up er et daglig møte oftest holdt på starten av dagen hvor de neste 24 timene med arbeid planlegges og de forrige 24 timene oppsummeres. Hvert enkelt gruppemedlem bruker noen få minutter til å snakke om hva de har arbeidet med og hva de skal arbeide med videre. Det estimeres tidsbruk ofte gjennom en burndown graf og funksjonalitet diskuteres. Fokuset her ligger mye på utfordringer som teamet kan bidra med å løse. I mange sporter har laget en strategisk samling før, under eller etter en kamp. Samlingen gjør laget informert, synkronisert og kalibrert gjennom kampen. Daglig stand up er Scrums måte å samle laget før en kamp. Den gir teamet en følelse av samhold.
+
+\subsection{\textbf{Fordeler med SCRUM}}
+
+\subsubsection{\textbf{Smidig forandring}}
+Med korte planleggingsfaser er det lett å legge til rette for forandring uansett hvor eller når i prosjektet det gjøres. I hver Sprint gjennomgåes produktets backlog og nye mål settes. Produkteier har også mulighet til å forandre på deres ønsker og prioriteringer gjennom hele prosjektet. 
+
+\subsubsection{\textbf{Tett kommunikasjon med oppdragsgiver}}
+Scrum gir kunden mulighet til å ta del i utviklingsprosessen fra start til slutt. Faste sprint review-møter med oppdragsgiver og en produkt backlog gir kontinuerlig kommunikasjon mellom oppdragsgiver og utviklingsteamet. 
+
+\subsubsection{\textbf{Oppfordrer til kommunikasjon innad i teamet}}
+Agile fremhever viktigheten av hyppig kommunikasjon og face to face interaksjon. Scrums daglig stand ups gir teamet en god måte å holde seg oppdatert med prosjektets progresjon
+
+
+\subsection{\textbf{Ulemper med Scrum}}
+
+\subsubsection{\textbf{Mindre konkret planlegging}}
+Det kan være vanskelig å fastsette en konkret utgivelsesdato ettersom prosjektet er i konstant endring. Scrum fastsetter en tidsramme for når produktet skal ferdigstilles i stedet for en fastsatt utgivelsesdato. Når tidsfristen er ute leveres produktet i sitt daværende stadie. Dette kan gjør at produktet som leveres ikke alltid blir godt nok ferdigstilt. 
+
+\subsubsection{\textbf{Vanskelig for større team å følge}}
+Scrum avhenger av kontinuerlig kommunikasjon innad i teamet. Dette kan være et problem i store utviklingsteam med flere ulike avdelinger. Dette gjør at mye av tiden ofte blir brukt til organisering av prosesser i stedet for produktivitet. 
+
+En løsning på dette som ofte benyttes er å dele inn større prosjekter i flere individuelle team. Hvert enkelt team blir delegert en del av et større prosjekt eller et produkt. Dette gjør det enklere å holde styr på gruppens medlemmer.
+
+Andre større selskaper bruker ``Scrum of scrums`` for å lettere håndtere mindre teams i en stor organisasjon.
+
+\subsubsection{\textbf{Prokrastinering}}
+Gjennom arbeid med et større prosjekt er det ofte at selv velmente og hardt arbeidende personer utsetter å arbeide med et prosjekt. 
+
+\section{\textbf{Hvorfor vi valgte Scrum}}
+Siden Scrum som rammeverk gir oss fleksibiliteten til å plukke de delene av prosessen som passer oss best, og kvitte oss med de andre ga det gruppen en bedre forutsetning for å møte hindringer underveis i prosessen. Det var i starten av prosjektet usikkerhet rundt oppgaven og måten vi skulle løse oppgaven på. Derfor var det å velge et rammeverk som gir oss stabilitet og mulighet til å effektivt kunne tilpasse oss forandringer i gruppens sammensetning eller fremgang i prosjektet helt sentralt. Vi hadde i tillegg mulighet til å følge arbeidsmetodikken til oppdragsgiver som gjorde det lettere å planlegge møter med interessentene. 
+
+\section{\textbf{Vår bruk av Scrum}}
+Siden Andreas kjenner best til oppdragsgiver og handelsportalen Millum leverer var det naturlig at han gikk inn i en rolle som Scrum Master i starten av prosjektet. Det gjorde det lettere å samhandle med oppdragsgiver og sørge for fremgang i starten av prosjektet hvor det var mye usikkerhet. 
+
+Teamet bestemte seg for å følge oppdragsgiver sin lengde på sprintsykluser, som er 2 ukers iterasjoner. Dette er ideelt så teamet både kunne følge Millum sin struktur, men også siden lengden passer fint med tanke på hvor mye tid som går til planlegging og gjennomføring av de ulike møtene.
+
+Vi benyttet oss til dels av daglig stand up, men etterhvert som teamet fikk forståelse for prosjektet var det mindre nødvendig å ha standup hver dag siden vi uansett satt så tett på hverandre. 
+
+I slutten av hver sprint inviterte vi interessenter fra Millum til en gjennomgang av hva vi hadde løst i løpet av sprinten. Det ga oss mulighet til å kontinuerlig få tilbakemelding fra mennesker med mer erfaring og innsikt i markedet vi jobbet mot, men også sørge for at de var oppdatert på progresjonen vi hadde i prosjektet.
+
+Etter Sprint Review satte teamet av tid til refleksjon i form av en Sprint Retrospective. Hensikten var at teamet skulle ha en dedikert arena til å ta opp ting som kanskje ikke var så lett å dele i plenum, og samtidig ta med seg de gode elementene fra sprinten så vi kontinuerlig lærer og utvikler oss som team. Under denne sesjonen fikk alle teammedlemmene utdelt tre post-it lapper hvor man skulle vurdere:
+
+\begin{itemize}
+    \item \textbf{Score 1-5 for sprinten}. 1 er dårligst og 5 er beste mulige score.
+    \item \textbf{Forbedringspotensiale}. Brukte teamet for lite tid til å forberede presentasjonen til interessenter, eller synes man kanskje at meningene sine ikke ble hørt.
+    \item \textbf{Ta med videre}. Hva synes man var bra med sprinten? Hadde man god kommunikasjon, eller klappet man hverandre på ryggen når man leverte god kode?.
+\end{itemize}
+
+Hvordan Scrum fungerte for oss i dette prosjektet kommer vi tilbake til i \textbf{\ref{Vurdering_SCRUM}}
+
 
 
 
